@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('shinn_theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<title>Shop — Shinn</title>
+<meta name="description" content="Shop Shinn's full range of clothing, accessories, and footwear for women and men.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-nav="">
+
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span class="sep">/</span><span class="current" id="shop-heading">Shop</span>
+  </nav>
+
+  <div class="section-head" style="margin-top:0;">
+    <div>
+      <span class="eyebrow" id="shop-eyebrow">Shop</span>
+      <h2 id="shop-heading-display" style="font-size:var(--step-4); font-family:var(--font-display); font-weight:800;">All Products</h2>
+    </div>
+    <button class="btn btn-secondary mobile-filter-toggle" id="mobile-filter-open">Filter &amp; Sort</button>
+  </div>
+
+  <div class="shop-layout">
+    <aside class="filter-rail" id="filter-rail">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="eyebrow">Filters</span>
+        <button class="icon-btn" id="mobile-filter-close" style="display:none;" aria-label="Close filters">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <details class="filter-group" open>
+        <summary>Department</summary>
+        <div class="filter-options" id="dept-options"></div>
+      </details>
+      <details class="filter-group" open>
+        <summary>Size</summary>
+        <div class="size-pill-group" id="size-options"></div>
+      </details>
+      <details class="filter-group" open>
+        <summary>Color</summary>
+        <div class="color-swatch-row" id="color-options"></div>
+      </details>
+      <details class="filter-group">
+        <summary>Price</summary>
+        <div class="filter-options">
+          <label class="filter-check"><input type="radio" name="price"> Under $100</label>
+          <label class="filter-check"><input type="radio" name="price"> $100 – $200</label>
+          <label class="filter-check"><input type="radio" name="price"> $200+</label>
+        </div>
+      </details>
+    </aside>
+
+    <div>
+      <div class="shop-toolbar">
+        <span class="result-count" id="result-count">0 results</span>
+        <select class="sort-select" id="sort-select">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+      <div class="active-filters" id="active-filters"></div>
+      <div class="product-grid" id="product-grid"></div>
+    </div>
+  </div>
+</main>
+
+<div style="height:80px;"></div>
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/shop.js"></script>
+<style>@media (max-width:1080px){ #mobile-filter-close{ display:inline-flex !important; } }</style>
+</body>
+</html>

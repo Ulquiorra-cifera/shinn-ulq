@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('shinn_theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<title>Order Confirmed — Shinn</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-nav="">
+
+<div id="site-header"></div>
+
+<main class="wrap">
+  <div class="empty-state" style="max-width:520px; margin-inline:auto;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.4"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+    <span class="eyebrow">Order <span id="order-number"></span></span>
+    <h2 style="margin-top:10px;">Thank you — your order is confirmed.</h2>
+    <p>We've sent a confirmation email with your receipt and estimated delivery date. You can track your order any time from your account.</p>
+    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+  </div>
+</main>
+
+<div style="height:120px;"></div>
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.getElementById('order-number').textContent = '#MDN-' + Math.floor(100000 + Math.random() * 900000);
+</script>
+</body>
+</html>
