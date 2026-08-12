@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #ffffff;
+  --color-text: #111111;
+  --color-text-secondary: #666666;
+  --color-border: #e5e5e5;
+  --color-card: #fafafa;
+}
+
+.dark {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-text-secondary: #a1a1a1;
+  --color-border: #262626;
+  --color-card: #111111;
+}
+
+* {
+  transition-property: background-color, border-color, color, opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
